@@ -8,7 +8,7 @@ export default function Result(props) {
         <section>
           <h1>{props.result.word}</h1>
         </section>
-        {props.result.meaning.map(function (meaning, index) {
+        {props.result.meanings.map(function (meaning, index) {
           return (
             <section key={index}>
               <Meaning meaning={meaning} />
