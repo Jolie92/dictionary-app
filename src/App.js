@@ -8,11 +8,10 @@ export default function App() {
     <div className="App">
       <div className="container">
       <header className="App-header">
-        <img src={logo} className="App-logo img-fluid" alt="logo"/>      
+        <img src={logo} className="App-logo img-fluid" alt="Shecodes Logo"/>      
       </header>
-      <main>
+      
         <Dictionary defaultKeyword="sunset"/>
-      </main>
       <footer className="App-footer">
         This project was coded by <a href="https://myportfoliolauraloriga.netlify.app/"
         target="_blank" rel="noreferrer">Laura Loriga </a>  and is {""}
