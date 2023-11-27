@@ -25,9 +25,9 @@ function search(){
     axios.get(apiUrl).then(handleDictionResponse);
 
 let pexelsApiKey = "kmxj5ck13i841hvMXwZbq7Gka10VezC3uPPPn7Uc8VQrtAO3Z6b6mRdy";
-let pexelsApiUrl =`https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
+let pexelsApiUrl =`https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
 let headers = {Authorization: `Bearer ${pexelsApiKey}`};
-axios.get(pexelsApiUrl,{ headers:headers}).then(handlePexelsResponse);
+axios.get(pexelsApiUrl,{headers:headers}).then(handlePexelsResponse);
 
 }
 
