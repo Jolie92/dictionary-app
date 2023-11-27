@@ -14,7 +14,7 @@ background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 
 .App-logo{
   max-width: 200px;
   display: block;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 .App-footer{
   text-align: center;

@@ -11,11 +11,10 @@ export default function Dictionary(props){
     let [photos, setPhotos] = useState([]);
    
 function handleDictionResponse(response){
-     setResult (response.data[0]);
+     setResult (response.data);
 }
 
 function handlePexelsResponse(response){
-     setResult(response.data);
      setPhotos (response.data.photos);
 }
 
@@ -26,7 +25,7 @@ function search(){
 
 let pexelsApiKey = "kmxj5ck13i841hvMXwZbq7Gka10VezC3uPPPn7Uc8VQrtAO3Z6b6mRdy";
 let pexelsApiUrl =`https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
-let headers = {Authorization: `Bearer ${pexelsApiKey}`};
+let headers = { Authorization: `${pexelsApiKey}` };
 axios.get(pexelsApiUrl,{headers:headers}).then(handlePexelsResponse);
 
 }
@@ -63,9 +62,7 @@ return(
               onChange={handleKeywordChange}
             />
           </form>
-<div className="hint">
-    suggested words: sunset, wine, yoga, tennis...
-</div>
+
 </section>
 <Result result={result}/>
 <Photos photos={photos}/>
