@@ -7,7 +7,7 @@ import Photos from "./Photos";
 export default function Dictionary(props){
     let [keyword, setKeyword] = useState(props.defaultKeyword);
     let [result, setResult] = useState(null);
-    let [loaded, setLoaded] = useState(false);
+    
     let [photos, setPhotos] = useState([]);
    
 function handleDictionResponse(response){
@@ -35,10 +35,7 @@ axios.get(pexelsApiUrl,{headers:headers}).then(handlePexelsResponse);
     search();
   }
 
-   function load() {
-    setLoaded(true);
-    search();
-  }
+   
 
  
 
@@ -47,7 +44,7 @@ function handleKeywordChange(event){
      setKeyword(event.target.value);
     }
 
-    if (loaded) {
+    
 return(
 <div className="Dictionary">
         <section>
@@ -68,8 +65,4 @@ return(
 <Photos photos={photos}/>
 </div>
 );
-} else {
-    load();
-    return "Loading!"
-  }
 }

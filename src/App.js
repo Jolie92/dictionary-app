@@ -11,7 +11,7 @@ export default function App() {
         <img src={logo2} className="App-logo img-fluid" alt="Logo"/>      
       </header>
       
-        <Dictionary defaultKeyword="cat"/>
+        <Dictionary />
       <footer className="App-footer">
         This project was coded by <a href="https://myportfoliolauraloriga.netlify.app/"
         target="_blank" rel="noreferrer">Laura Loriga </a>  and is {""}
